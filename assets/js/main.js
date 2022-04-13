@@ -122,6 +122,7 @@ const closeModal = document.querySelector('.close-button')
 openModal.addEventListener('click', ()=>{
 	window.scrollTo(0, 0);
 	modal.showModal();
+	modal.scrollTop = 0;
 	
 })
 
@@ -143,7 +144,7 @@ fetch('https://api.nasa.gov/planetary/apod?api_key=hjZWQLG9inotOShvMdkKIDVoxRI8a
     document.getElementById('apod-image').src = data.hdurl
     document.getElementById('description').innerHTML = explain
     document.getElementById('image-title').innerHTML = data.title
-	document.getElementById('credit').innerHTML = `Image Credit & Copyright ${data.copyright}`
+	document.getElementById('credit').innerHTML = `Image Credit & Copyright:  ${data.copyright}`
     
 
 
