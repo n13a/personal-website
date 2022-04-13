@@ -115,3 +115,48 @@
 			});
 
 })(jQuery);
+const modal = document.querySelector('.modal')
+const openModal = document.querySelector('.open-button')
+const closeModal = document.querySelector('.close-button')
+
+openModal.addEventListener('click', ()=>{
+	window.scrollTo(0, 0);
+	modal.showModal();
+	
+})
+
+closeModal.addEventListener('click', ()=>{
+	modal.close();
+})
+
+
+
+fetch('https://api.nasa.gov/planetary/apod?api_key=hjZWQLG9inotOShvMdkKIDVoxRI8asQnQCnqfPNK')
+.then(res => res.json())
+.then(data => {
+    console.log(data)
+	const birth = data.explanation.search('Birthday')
+	
+
+	const explain = data.explanation.substring(0, birth)
+
+    document.getElementById('apod-image').src = data.hdurl
+    document.getElementById('description').innerHTML = explain
+    document.getElementById('image-title').innerHTML = data.title
+	document.getElementById('credit').innerHTML = `Image Credit & Copyright ${data.copyright}`
+    
+
+
+})
+.catch(err => {
+    console.log(`error ${err}`)
+})
+
+window.onclick = function(event) {
+
+	if (event.target == modal) {
+ 
+	   modal.close();
+ 
+	 }
+}

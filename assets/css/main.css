@@ -65,6 +65,90 @@ input::-moz-focus-inner {
 	padding: 0;
 }
 
+
+
+.css-button-3d--black {
+	min-width: 130px;
+	margin-top: 10px;
+	height: 40px;
+	color: #fff;
+	padding: 5px 10px;
+	font-weight: bold;
+	cursor: pointer;
+	transition: all 0.3s ease;
+	position: relative;
+	display: inline-block;
+	outline: none;
+	border-radius: 5px;
+	border: none;
+	background: #343a40;
+	box-shadow: 0 5px #212529;
+  }
+  .css-button-3d--black:hover {
+	box-shadow: 0 3px #212529;
+	top: 1px;
+  }
+  .css-button-3d--black:active {
+	box-shadow: 0 0 #212529;
+	top: 5px;
+  }
+
+
+.modal::backdrop {
+	background: black;
+	opacity: .6;
+}
+
+.modal {
+	padding: 20px;
+	scroll-behavior: auto;
+	background: black;
+	width: 100ch;
+	border: none;
+	border-radius: 5px
+}
+#apod-image {
+	width: 100%;
+	margin: 0 auto;
+	
+}
+
+.modal > h3 {
+	color: white;
+	text-align: left;
+	;
+}
+.modal p {
+	text-align: left;
+}
+#credit{
+	color:rgba(255, 255, 255, 0.25);
+	display: block;
+	left: 0;
+}
+
+/* width */
+.modal::-webkit-scrollbar {
+	width: 10px;
+  }
+  
+  /* Track */
+  .modal::-webkit-scrollbar-track {
+	background: #f1f1f1; 
+	border-radius: 5px;
+  }
+   
+  /* Handle */
+  .modal::-webkit-scrollbar-thumb {
+	background: rgb(54, 54, 54);
+	border-radius: 5px;
+  }
+  
+  /* Handle on hover */
+  .modal::-webkit-scrollbar-thumb:hover {
+	background: #555; 
+  }
+
 input, select, textarea {
 	-moz-appearance: none;
 	-webkit-appearance: none;
@@ -76,6 +160,7 @@ input, select, textarea {
 
 	html {
 		box-sizing: border-box;
+		scroll-behavior: smooth;
 	}
 
 	*, *:before, *:after {
