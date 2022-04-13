@@ -135,7 +135,7 @@ closeModal.addEventListener('click', ()=>{
 fetch('https://api.nasa.gov/planetary/apod?api_key=hjZWQLG9inotOShvMdkKIDVoxRI8asQnQCnqfPNK')
 .then(res => res.json())
 .then(data => {
-    console.log(data)
+    
 	const birth = data.explanation.search('Birthday')
 	
 
