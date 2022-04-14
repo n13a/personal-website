@@ -100,7 +100,7 @@ input::-moz-focus-inner {
 }
 
 .modal {
-	padding: 20px;
+	padding: 30px;
 	scroll-behavior: auto;
 	background: black;
 	width: 100ch;
