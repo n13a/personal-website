@@ -136,15 +136,24 @@ fetch('https://api.nasa.gov/planetary/apod?api_key=hjZWQLG9inotOShvMdkKIDVoxRI8a
 .then(res => res.json())
 .then(data => {
     
-	const birth = data.explanation.search('Birthday')
+	console.log(data)
+
+	if(data.media_type == 'video'){
+		document.getElementById('apod-image').remove()
+		
+		const theIframe = document.createElement("iframe");
+		theIframe.src = data.url
+		const target = document.querySelector('#description');
+
+		target.parentNode.insertBefore(theIframe, target);
+	} else {
+		document.getElementById('apod-image').src = data.hdurl
+		document.getElementById('credit').innerHTML = `Image Credit & Copyright:  ${data.copyright}`
+	}
 	
-
-	const explain = data.explanation.substring(0, birth)
-
-    document.getElementById('apod-image').src = data.hdurl
-    document.getElementById('description').innerHTML = explain
+    document.getElementById('description').innerHTML = data.explanation
     document.getElementById('image-title').innerHTML = data.title
-	document.getElementById('credit').innerHTML = `Image Credit & Copyright:  ${data.copyright}`
+	
     
 
 
