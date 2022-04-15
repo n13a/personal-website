@@ -148,9 +148,11 @@ fetch('https://api.nasa.gov/planetary/apod?api_key=hjZWQLG9inotOShvMdkKIDVoxRI8a
 		target.parentNode.insertBefore(theIframe, target);
 	} else {
 		document.getElementById('apod-image').src = data.hdurl
+		
+	}
+	if (data.copyright != undefined){
 		document.getElementById('credit').innerHTML = `Image Credit & Copyright:  ${data.copyright}`
 	}
-	
     document.getElementById('description').innerHTML = data.explanation
     document.getElementById('image-title').innerHTML = data.title
 	
