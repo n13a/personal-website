@@ -135,8 +135,6 @@ closeModal.addEventListener('click', ()=>{
 fetch('https://api.nasa.gov/planetary/apod?api_key=hjZWQLG9inotOShvMdkKIDVoxRI8asQnQCnqfPNK')
 .then(res => res.json())
 .then(data => {
-    
-	console.log(data)
 
 	if(data.media_type == 'video'){
 		document.getElementById('apod-image').remove()
@@ -172,3 +170,17 @@ window.onclick = function(event) {
  
 	 }
 }
+
+
+fetch('https://api.quotable.io/random?tags=famous-quotes,technology')
+.then(res => res.json())
+.then(data => {
+	console.log(data)
+    document.querySelector('#quote').textContent = data.content
+    document.querySelector('#quoteAuth').textContent =  `~ ${data.author}`
+	
+
+})
+.catch(err => {
+    console.log(`error ${err}`)
+})

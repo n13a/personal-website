@@ -155,6 +155,11 @@ iframe {
   .modal::-webkit-scrollbar-thumb:hover {
 	background: #555; 
   }
+#quote {
+	font-size: 1.5rem;
+}
+
+
 
 input, select, textarea {
 	-moz-appearance: none;
@@ -294,7 +299,7 @@ input, select, textarea {
 		border-left: solid 6px #efefef;
 		font-style: italic;
 		margin: 0 0 2em 0;
-		padding: 0.5em 0 0.5em 1.5em;
+		padding: 0.5em 0 0.3em 1.5em;
 	}
 
 	code {
@@ -2685,7 +2690,7 @@ input, select, textarea {
 		justify-content: space-between;
 		background-color: #1f1815;
 		background-attachment: scroll,								scroll;
-		background-image: url("images/overlay.png"), url("https://images.pexels.com/photos/3308588/pexels-photo-3308588.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940");
+		background-image: url("images/overlay.png"), url("https://images.unsplash.com/photo-1564428366891-dc20b1edf33b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1528&q=80");
 		background-position: top left,							top left;
 		background-repeat: repeat,								no-repeat;
 		background-size: auto,								150%;
