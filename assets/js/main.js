@@ -172,10 +172,10 @@ window.onclick = function(event) {
 }
 
 
-fetch('https://api.quotable.io/random?tags=famous-quotes,technology')
+fetch('https://api.quotable.io/random?tags=inspirational')
 .then(res => res.json())
 .then(data => {
-	console.log(data)
+	
     document.querySelector('#quote').textContent = data.content
     document.querySelector('#quoteAuth').textContent =  `~ ${data.author}`
 	
@@ -184,3 +184,4 @@ fetch('https://api.quotable.io/random?tags=famous-quotes,technology')
 .catch(err => {
     console.log(`error ${err}`)
 })
+
