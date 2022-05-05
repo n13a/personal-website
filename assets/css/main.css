@@ -120,6 +120,14 @@ iframe {
 	
 }
 
+section#twoSvg {
+	display: flex;
+}
+
+section#twoSvg img{
+	max-width: 100%;
+}
+
 .modal > h3 {
 	color: white;
 	text-align: left;

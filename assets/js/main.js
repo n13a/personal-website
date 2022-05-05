@@ -172,16 +172,5 @@ window.onclick = function(event) {
 }
 
 
-fetch('https://api.quotable.io/random?tags=inspirational')
-.then(res => res.json())
-.then(data => {
-	
-    document.querySelector('#quote').textContent = data.content
-    document.querySelector('#quoteAuth').textContent =  `~ ${data.author}`
-	
 
-})
-.catch(err => {
-    console.log(`error ${err}`)
-})
 
