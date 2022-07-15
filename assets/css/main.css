@@ -2719,6 +2719,11 @@ input, select, textarea {
 			width: 100%;
 		}
 
+		.inner > img {
+			max-width:90%;
+			
+		}
+
 		#header > .inner {
 			-moz-flex-grow: 1;
 			-webkit-flex-grow: 1;
