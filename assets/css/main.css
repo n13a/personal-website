@@ -2709,6 +2709,7 @@ input, select, textarea {
 		text-align: right;
 		top: 0;
 		width: 35%;
+		background-position-y: 40%;
 	}
 
 		#header > * {
@@ -2922,7 +2923,13 @@ input, select, textarea {
 			.poptrox-popup .loader:before {
 				content: '\f1ce';
 			}
+			
+			div#main{
+				background-color: #202427;
 
+			}
+
+			
 		.poptrox-popup .caption {
 			background: #fff;
 			bottom: 0;
@@ -3330,3 +3337,21 @@ input, select, textarea {
 			}
 
 	}
+
+
+body {
+	background-color: #202427;
+}
+
+div.row input,  div.row textarea{
+	background-color: #fff;
+
+}
+
+ul.actions{
+	margin-top: 20px;
+}
+h2, strong{
+	color: #577c97
+}
+
