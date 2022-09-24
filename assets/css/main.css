@@ -133,6 +133,15 @@ section#twoSvg img{
 	text-align: left;
 	;
 }
+
+.open-button{
+	width: 70px;
+	display: block;
+	cursor: pointer;
+	margin: 0 20%
+}
+
+
 .modal p {
 	text-align: left;
 }
