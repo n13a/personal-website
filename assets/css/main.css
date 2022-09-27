@@ -141,6 +141,30 @@ section#twoSvg img{
 	margin: 0 20%
 }
 
+.css-button-gradient {
+	margin-top: 20px;
+	min-width: 170px;
+	height: 50px;
+	color: #fff;
+	padding: 5px 10px;
+	font-weight: bold;
+	cursor: pointer;
+	transition: all 0.3s ease;
+	position: relative;
+	display: inline-block;
+	outline: none;
+	border-radius: 30px;
+	border: none;
+	background-size: 120% auto;
+	background-image: url(../../images/jwst.png);
+  }
+  .css-button-gradient:hover {
+	background-position: right center;
+  }
+  .css-button-gradient:active {
+	top: 2px;
+  }
+ 
 
 .modal p {
 	text-align: left;
