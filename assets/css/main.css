@@ -135,10 +135,8 @@ section#twoSvg img{
 }
 
 .open-button{
-	width: 70px;
 	display: block;
-	cursor: pointer;
-	margin: 0 20%
+	
 }
 
 .css-button-gradient {
