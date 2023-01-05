@@ -228,56 +228,66 @@ section#twoSvg img {
 
 }
 
-.gradient {
-	font-size: 1.6rem;
-	background: linear-gradient(90deg, #edae49, #00798c, #30638e, #003d5b, #d1495b);
-	background-size: 700% 700%;
-	animation: gradient 10s ease infinite;
-	-webkit-background-clip: text;
-	-webkit-text-fill-color: transparent;
-	background-clip: text;
-}
-
-@keyframes gradient {
-	0% {
-		background-position: 0% 50%;
-	}
-
-	50% {
-		background-position: 100% 50%;
-	}
-
-	100% {
-		background-position: 0% 50%;
-	}
+.stat {
+	display: block;
+	border-bottom-width: 0px;
 }
 
 .css-button-gradient {
-	margin-top: 20px;
-	min-width: 170px;
-	height: 50px;
-	color: #fff;
-	padding: 5px 10px;
-	font-weight: bold;
-	cursor: pointer;
-	transition: all 0.3s ease;
-	position: relative;
-	display: inline-block;
-	outline: none;
-	border-radius: 30px;
+	text-decoration: none;
 	border: none;
-	background-size: 120% auto;
-	background-image: url(../../images/jwst.png);
+	font-size: 14px;
+	font-family: inherit;
+	color: #000;
+
+	width: 5em;
+	margin: 10px auto;
+	position: relative;
+	display: inline;
+	height: 2.5em;
+	text-align: center;
+	background: linear-gradient(90deg, #03a9f4, #f441a5, #ffeb3b, #03a9f4);
+	background-size: 300%;
+	border-radius: 30px;
+	z-index: 1;
 }
 
 .css-button-gradient:hover {
-	background-position: right center;
+	animation: ani 8s linear infinite;
+	border: none;
+}
+
+@keyframes ani {
+	0% {
+		background-position: 0%;
+	}
+
+	100% {
+		background-position: 400%;
+	}
+}
+
+.css-button-gradient:before {
+	content: '';
+	position: absolute;
+	top: -5px;
+	left: -5px;
+	right: -5px;
+	bottom: -5px;
+	z-index: -1;
+	background: linear-gradient(90deg, #03a9f4, #f441a5, #ffeb3b, #03a9f4);
+	background-size: 400%;
+	border-radius: 35px;
+	transition: 1s;
+}
+
+.css-button-gradient:hover::before {
+	filter: blur(20px);
 }
 
 .css-button-gradient:active {
-	top: 2px;
+	background: linear-gradient(32deg, #03a9f4, #f441a5, #ffeb3b, #03a9f4);
 }
-
 
 .modal p {
 	text-align: left;
