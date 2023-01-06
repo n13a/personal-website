@@ -150,7 +150,9 @@ input::-moz-focus-inner {
 	border: 0;
 	padding: 0;
 }
-
+.inner * {
+	margin-top: 1rem;
+}
 
 
 .css-button-3d--black {
@@ -240,9 +242,9 @@ section#twoSvg img {
 	font-family: inherit;
 	color: #000;
 	width: 5em;
-	margin: 10px auto;
+	margin: 2em auto;
 	position: relative;
-	display: inline;
+	display: inline-block;
 	height: 2.5em;
 	text-align: center;
 	background: linear-gradient(90deg, #03a9f4, #f441a5, #ffeb3b, #03a9f4);
